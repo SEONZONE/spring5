@@ -1,4 +1,4 @@
-package spring5fs.core.chap03.spring;
+package spring5fs.core.chap04.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
