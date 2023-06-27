@@ -2,7 +2,7 @@ package spring5fs.core.chap04.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import spring5fs.core.chap03.spring.*;
+import spring5fs.core.chap04.spring.*;
 
 @Configuration
 public class AppCtx {
@@ -13,7 +13,7 @@ public class AppCtx {
 
     @Bean
     public MemberRegisterService memberRegisterService() {
-        return new MemberRegisterService(memberDao());
+        return new MemberRegisterService();
     }
 
     @Bean
@@ -28,8 +28,9 @@ public class AppCtx {
     }
 
     @Bean
-    public MemberListPrinter listPrinter() {
-        return new MemberListPrinter(memberDao(),memberPrinter());
+    public MemberInfoPrinter infoPrinter() {
+        MemberInfoPrinter infoPrinter = new MemberInfoPrinter();
+        return infoPrinter;
     }
 
     @Bean
@@ -39,4 +40,11 @@ public class AppCtx {
         versionPrinter.setMinorVersion(0);
         return versionPrinter;
     }
+
+    @Bean
+    public MemberListPrinter listPrinter() {
+        return new MemberListPrinter();
+    }
+
+
 }

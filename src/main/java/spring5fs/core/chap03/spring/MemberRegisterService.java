@@ -5,7 +5,9 @@ import java.time.LocalDateTime;
 import java.time.LocalDateTime;
 
 public class MemberRegisterService {
+
     private MemberDao memberDao;
+
 
     public MemberRegisterService(MemberDao memberDao) {
         this.memberDao = memberDao;
