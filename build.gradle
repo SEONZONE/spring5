@@ -14,7 +14,14 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '11.0.0-M1'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'mysql:mysql-connector-java'
+	implementation 'com.h2database:h2'
+	runtimeOnly("com.mysql:mysql-connector-j")
+
 }
 
 tasks.named('test') {
